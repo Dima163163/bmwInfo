@@ -1,0 +1,24 @@
+.filterList
+  display: flex
+  gap: 12px
+  align-items: center
+
+
+.filterBtn
+  border-radius: 40px
+  padding: 6px 24px
+  text-align: center
+  background: #eaeaea
+  border: none
+  cursor: pointer
+  &:hover
+    background: #b5b5b5
+
+
+.filterBtnActive
+  color: var(--text-white)
+  background: var(--btn-black)
+
+@media (max-width: 560px)
+  .filterList
+    overflow: auto

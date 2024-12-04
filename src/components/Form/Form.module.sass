@@ -1,0 +1,58 @@
+.loginForm
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 10px
+  margin-bottom: 20px
+  position: relative
+
+.formLabel
+  position: relative
+  width: 100%
+  font-size: 16px
+  margin-bottom: 24px
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.formInput
+  outline: none
+  border: 1px solid var(--form-grey)
+  border-radius: 12px
+  padding: 18px 16px
+  max-width: 100%
+  &::placeholder
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.5
+    color: var(--form-text)
+
+.formBtn
+  cursor: pointer
+  padding: 12px 24px
+  width: 100%
+  margin-bottom: 20px
+  border: none
+  background: var(--form-btn-active)
+  border-radius: 40px
+  font-weight: 500
+  font-size: 16px
+  line-height: 1.5
+  text-align: center
+  color: var(--form-btn-active-text)
+  &:disabled
+    background: var(--form-btn-disabled)
+    color: var(--form-btn-disabled-text)
+    cursor: none
+
+.formError
+  color: red
+  position: absolute
+  bottom: -18px
+  text-align: center
+
+.errorMessage
+  position: absolute
+  color: red
+  bottom: -20px
+  right: 0

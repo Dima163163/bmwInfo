@@ -1,0 +1,60 @@
+$height: 400px
+  
+.sliderWrapper
+  display: flex
+  align-items: center
+  flex-direction: column
+  position: relative
+  z-index: 2
+  max-width: 700px
+  width: 100%
+
+.slider
+  display: flex
+  justify-content: center
+  width: 98%
+  height: $height
+
+.sliderList
+  width: 100%
+  height: auto
+  overflow: hidden
+  border-radius: 30px
+
+.sliderItem
+  display: none
+  width: 100%
+  height: 100%
+
+
+.sliderItemActive
+  display: block
+
+.sliderImage
+  max-width: 100%
+  width: 100%
+  height: 100%
+
+.btn
+  padding: 0
+  position: absolute
+  z-index: 3
+  width: 50px
+  height: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+  border: none
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.30)
+  color: var(--btn-color)
+  font-size: 36px
+  background: var(--white-bg)
+
+.btnPrev
+  top: calc($height - 50%)
+  left: 0
+
+.btnNext
+  top: calc($height - 50%)
+  right: 0

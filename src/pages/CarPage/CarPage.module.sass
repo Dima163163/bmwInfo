@@ -1,0 +1,99 @@
+.carPageWrapper
+  display: flex
+  flex-direction: column
+  gap: 40px
+
+.carInfoWrapper
+  display: flex
+  gap: 20px
+
+.carInfoTitle
+  font-size: 32px
+  margin-bottom: 12px
+  font-weight: 600
+
+.carInfoModel
+  font-size: 20px
+  margin-bottom: 12px
+
+.carInfoGeneration
+  font-size: 20px
+  margin-bottom: 12px
+
+.carInfoYear
+  font-size: 22px
+
+
+.carPageListTypes
+  margin-bottom: 18px
+
+.title
+  font-size: 20px
+  font-weight: 500
+  margin-bottom: 24px
+
+.listItem
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 8px
+  &:last-child
+    margin-bottom: 0
+
+
+.listCircle
+  display: block
+  width: 8px
+  height: 8px
+  background: #0066b1
+  border-radius: 50%
+
+.carPageText
+  font-size: 16px
+  line-height: 150%
+  margin-bottom: 12px
+  &:last-child
+    margin-bottom: 0
+
+
+.btnBack
+  padding: 0
+  display: flex
+  align-items: center
+  gap: 8px
+  cursor: pointer
+  max-width: 100px
+  border: none
+  color: black
+  font-size: 16px
+  font-weight: 500
+  background: none
+
+.commentsWrapper
+  border: 1px solid var(--form-grey)
+  border-radius: 16px
+  padding: 24px
+
+.commentsTitle
+  font-size: 20px
+  margin-bottom: 20px
+
+.titleComment
+  text-align: center
+  font-style: 18px
+  color: var(--text-color-grey)
+
+.deleteMessage
+  position: absolute
+  border: 1px solid green
+  padding: 10px 20px
+  font-size: 20px
+  color: green
+  bottom: 20px
+  border-radius: 12px 
+
+@media (max-width: 991px)
+  .carInfoWrapper
+    flex-direction: column
+
+

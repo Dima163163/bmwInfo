@@ -1,0 +1,37 @@
+.navList
+  display: flex
+  list-style: none
+  gap: 20px
+
+.navMenuMobile
+  opacity: 0
+  margin-bottom: 30px
+
+.navLink
+  display: block
+  color: var(--text-white)
+  text-decoration: none
+  font-size: 16px
+  font-weight: 500
+  cursor: pointer
+  &:hover
+    color: #8b8b8b
+
+@media (max-width: 991px)
+  .navList
+    gap: 8px
+  .navLink
+    font-size: 10px
+
+@media (max-width: 560px)
+  .navMenu
+    display: none
+  .navMenuMobile
+    opacity: 1
+  .navListMobile
+    display: flex
+    align-items: flex-end
+    gap: 20px
+    flex-direction: column
+  .navLink
+    font-size: 16px

@@ -1,0 +1,133 @@
+.header
+  position: fixed
+  z-index: 4
+  width: 100%
+  background-color: var(--bg-color)
+  padding: 30px 0
+
+.headerWrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.headerMain
+  text-decoration: none
+
+.headerLink
+  display: flex
+  align-items: center
+  gap: 10px
+  text-decoration: none
+  color: var(--text-white)
+
+.headerLogo
+  display: block
+  width: 50px
+  height: 50px
+
+
+.btn
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 4px
+  border-radius: 40px
+  padding: 12px 26px
+  width: 100px
+  height: 48px
+  border: none
+  background: var(--form-btn-active)
+  color: var(--text-white)
+  text-decoration: none
+
+.burgerBtn
+  display: none
+  width: 40px
+  height: 30px
+  cursor: pointer
+
+.burgerLine
+  width: 100%
+  height: 2px
+  background: var(--white-bg)
+  margin-bottom: 10px
+
+.btnMobile
+  display: none
+  justify-content: center
+  align-items: center
+  gap: 4px
+  border-radius: 40px
+  padding: 12px 26px
+  width: 100px
+  height: 48px
+  border: none
+  background: var(--form-btn-active)
+  color: var(--text-white)
+  text-decoration: none
+
+.btnText
+  line-height: 110%
+
+.avatar
+  width: 15px
+  height: 15px
+
+.mobileMenu
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  padding: 50px 30px
+  opacity: 0
+  position: absolute
+  background-color: grey
+  width: 50%
+  top: 0
+  right: -300px
+  height: 100vh
+  transition: 1s all
+
+
+.burgerBtnClose
+  display: none
+  width: 30px
+  height: 30px
+  position: relative
+  margin-bottom: 30px
+
+.burgerLineClose
+  position: absolute
+  top: 15px
+  background: var(--form-btn-active)
+  width: 30px
+  height: 1px
+  transform: rotate(45deg)
+  &:last-child
+    transform: rotate(-45deg)
+
+
+@media (max-width: 991px)
+  .headerLogo
+    width: 30px
+    height: 30px
+  .headerLink
+    font-size: 12px
+  .btn
+    font-size: 8px
+    padding: 8px 16px
+    width: 60px
+    height: 30px
+
+@media (max-width: 560px)
+  .burgerBtn
+    display: block
+  .btn
+    display: none
+  .btnMobile
+    display: flex
+  .burgerBtnClose
+    display: block
+  .mobileMenuActive
+    opacity: 1
+    top: 0
+    right: 0
