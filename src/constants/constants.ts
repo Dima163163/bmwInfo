@@ -1,1 +1,1 @@
-export const URL = 'intermediate-jade-stamp.glitch.me';
+export const URL = 'https://intermediate-jade-stamp.glitch.me';
