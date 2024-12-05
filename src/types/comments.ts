@@ -11,6 +11,7 @@ export type CommentsCar = CommentCar[];
 
 export interface CommentsState {
   status: Status;
+  statusChangeComment: Status;
   comments: CommentsCar;
   comment: CommentCar | null;
   deleteCommentText: string;

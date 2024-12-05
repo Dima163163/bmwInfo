@@ -8,6 +8,7 @@ import { deleteComment } from './deleteComment';
 
 const initialState: CommentsState = {
   status: Status.IDLE,
+  statusChangeComment: Status.IDLE,
   comments: [],
   comment: null,
   deleteCommentText: '',
@@ -59,13 +60,13 @@ const commentsSlice = createSlice({
       }
     );
     addCase(postComment.pending, (state) => {
-      state.status = Status.PENDING;
+      state.statusChangeComment = Status.PENDING;
       state.error = null;
     });
     addCase(
       postComment.fulfilled,
       (state, { payload }: PayloadAction<CommentCar>) => {
-        state.status = Status.FULFILLED;
+        state.statusChangeComment = Status.FULFILLED;
         state.comment = payload;
         state.error = null;
       }
@@ -73,7 +74,7 @@ const commentsSlice = createSlice({
     addCase(
       postComment.rejected,
       (state, { payload }: PayloadAction<string | undefined>) => {
-        state.status = Status.REJECTED;
+        state.statusChangeComment = Status.REJECTED;
         if (payload) {
           state.error = payload;
         }
@@ -81,35 +82,35 @@ const commentsSlice = createSlice({
     );
     addCase(
       patchComment.pending, (state) => {
-        state.status = Status.PENDING;
+        state.statusChangeComment = Status.PENDING;
         state.error = null;
       }
     )
     addCase(
       patchComment.fulfilled, (state, { payload }: PayloadAction<CommentCar>) => {
-        state.status = Status.FULFILLED;
+        state.statusChangeComment = Status.FULFILLED;
         state.comment = payload;
         state.error = null;
       }
     )
     addCase(
       patchComment.rejected, (state, { payload }: PayloadAction<string | undefined>) => {
-        state.status = Status.REJECTED;
+        state.statusChangeComment = Status.REJECTED;
         if (payload) {
           state.error = payload;
         }
       }
     )
     addCase(deleteComment.pending, (state) => {
-      state.status = Status.PENDING;
+      state.statusChangeComment = Status.PENDING;
       state.error = null;
     })
     addCase(deleteComment.fulfilled, (state, {payload}: PayloadAction<string>) => {
-      state.status = Status.FULFILLED;
+      state.statusChangeComment = Status.FULFILLED;
       state.deleteCommentText = payload;
     })
     addCase(deleteComment.rejected, (state, {payload}: PayloadAction<string | undefined>) => {
-      state.status = Status.REJECTED;
+      state.statusChangeComment = Status.REJECTED;
       if (payload) {
         state.error = payload;
       }

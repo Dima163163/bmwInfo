@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { selectCar, selectCarsStatus } from '../../redux/cars/carsSlice';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getCar } from '../../redux/cars/getCar';
 import { Status } from '../../types/status';
 import { Loader } from '../../components/Loader/Loader';
@@ -135,7 +135,7 @@ export const CarPage = () => {
             commentEditItem={commentEditItem}
           />
         )}
-        {carId ? (
+        {car.comments.length > 0 && carId ? (
           <CommentsList
             carId={carId}
             addCommentItem={addCommentItem}
