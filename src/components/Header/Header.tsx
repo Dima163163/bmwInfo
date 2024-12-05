@@ -56,6 +56,7 @@ export const Header = () => {
           </div>
         </div>
       </Container>
+
         <div className={classNames(styles.mobileMenu, {
           [styles.mobileMenuActive]: isActive
         })}>
@@ -64,13 +65,29 @@ export const Header = () => {
             <div className={styles.burgerLineClose}></div>
           </div>
           <NavigationMenu type='mobile' openCloseMobileMenu={openCloseMobileMenu} />
-          <Link
+          {!user.name && (<Link
             className={styles.btnMobile}
             to='/login'
             onClick={() => setIsActive(!isActive)}
           >
             Войти
-          </Link>
+          </Link>)}
+          {user.name && (
+            <button className={classNames(styles.btn, styles.btnMobile)} onClick={() => {
+              setIsActive(!isActive)
+              logOutHandle()
+            }}>
+              <img
+                className={styles.avatar}
+                src='/user.svg'
+                alt='avatar user'
+              />
+              <p className={styles.btnText}>
+                {user?.name[0].toUpperCase() +
+                  user?.name.slice(1).toLowerCase()}
+              </p>
+            </button>
+          )}
         </div>
     </div>
   );
