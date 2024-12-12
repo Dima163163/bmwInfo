@@ -39,6 +39,7 @@ export const CommentItem = ({
   const statusUsers = useAppSelector(selectUsersStatus);
   const user = useAppSelector((state) => selectUserById(state, userId));
   const authUser = useAppSelector(selectUser);
+
   useEffect(() => {
     dispatch(getUsers());
   }, []);

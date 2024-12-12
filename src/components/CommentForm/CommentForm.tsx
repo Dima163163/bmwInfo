@@ -1,6 +1,5 @@
-import React, {
+import {
   FormEvent,
-  ForwardRefRenderFunction,
   useEffect,
   useState
 } from 'react';
@@ -23,7 +22,7 @@ export const CommentForm = ({
   carId,
   editForm,
   changeEditForm,
-  commentEditItem
+  commentEditItem,
 }: CommentFormProps) => {
   const [comment, setComment] = useState('');
   const user = useAppSelector(selectUser);

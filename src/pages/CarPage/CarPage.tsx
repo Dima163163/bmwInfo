@@ -30,6 +30,7 @@ export const CarPage = () => {
     null
   );
 
+
   useEffect(() => {
     if (carId) {
       dispatch(getCar(carId));
